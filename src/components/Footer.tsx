@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold text-white mb-4">Thalios.ai</h3>
             <p className="text-gray-400 mb-4">
-              Advanced cetacean detection system using model distillation and edge AI technology for marine conservation.
+              AI-powered acoustic detection, classification, localization, and tracking for defense and environmental maritime applications.
             </p>
             <div className="flex space-x-4">
               <a href="" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
@@ -42,7 +42,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center text-gray-400">
                 <Mail className="h-4 w-4 mr-2 text-[#2dd4bf]" />
-                <a href="mailto:contact.thalios@gmail.com" className="hover:text-white transition-colors">contact.thalios@gmail.com</a>
+                <a href="mailto:noah.barrett@thalios.ai" className="hover:text-white transition-colors">noah.barrett@thalios.ai</a>
               </li>
               <li className="flex items-center text-gray-400">
                 <Phone className="h-4 w-4 mr-2 text-[#2dd4bf]" />
@@ -58,7 +58,7 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Stay Updated</h3>
             <p className="text-gray-400 mb-4">
-              Subscribe to our newsletter for the latest updates on marine conservation technology.
+              Subscribe to our newsletter for the latest updates on maritime acoustic intelligence.
             </p>
             <form className="flex flex-col space-y-2">
               <div className="flex">

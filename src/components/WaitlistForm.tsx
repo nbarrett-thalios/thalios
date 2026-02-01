@@ -66,23 +66,23 @@ export default function WaitlistForm() {
   }
 
   return (
-    <section id="waitlist" className="py-16 bg-gradient-to-b from-[#0f172a] to-[#1e293b] relative">
+    <section id="waitlist" className="min-h-screen py-12 bg-gradient-to-b from-[#0f172a] to-[#1e293b] relative flex items-center">
       <div className="absolute inset-0 bg-[#0f172a]/50 backdrop-blur-sm"></div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto text-center mb-12"
+          className="max-w-3xl mx-auto text-center mb-8"
         >
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
             Join Our Waitlist
           </h2>
           <p className="mt-4 text-lg text-gray-300">
-            Join our waitlist for organizations interested in monitoring cetacean movement. 
-            Thalios.ai empowers researchers, conservationists, and marine industries with adaptable, 
-            customizable solutions that work in energy-constrained environments.
+            Join our waitlist for organizations interested in passive acoustic maritime monitoring.
+            Thalios AI serves defense contractors, coast guards, environmental agencies, and government
+            clients with adaptable solutions for infrastructure-limited environments.
           </p>
         </motion.div>
 

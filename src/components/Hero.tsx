@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 import WavesAnimation from './WavesAnimation';
 
 export default function Hero() {
@@ -19,35 +20,43 @@ export default function Hero() {
         />
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="flex justify-center">
-          <div className="text-center max-w-3xl">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+          {/* Left side - Logo and Text content */}
+          <div className="text-center lg:text-left max-w-xl w-full flex flex-col items-center lg:items-start">
+            {/* Logo - left aligned */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="mb-2"
+            >
+              <img src="/thalios logo_horizontal white.png" alt="Thalios Logo" className="h-20 sm:h-16 lg:h-20 w-auto lg:-ml-6" />
+            </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <span className="block mt-1 text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
-                <span className="block text-white">Advanced Soundscape</span>
+              <span className="block text-3xl tracking-tight font-extrabold sm:text-4xl xl:text-5xl font-heading">
+                <span className="block text-white">Frontier Artificial Intelligence</span>
                 <span className="block bg-clip-text text-transparent bg-gradient-to-r from-[#5eead4] to-[#38bdf8]">
-                  Analysis System
+                  For Maritime Situational Awareness
                 </span>
               </span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="mt-6 text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-6 text-base text-gray-300 sm:text-lg lg:text-lg xl:text-xl max-w-lg"
             >
-              Thalios.ai's long-term vision is to serve the protection of cetaceans and marine protected areas through advanced ocean soundscape technology. 
-              Our primary focus is developing low-power edge devices that provide continuous, ISO 18405-compliant ambient noise monitoring for scientists, governmental bodies, and offshore industries. 
-              By integrating AI-powered acoustic classification algorithms on the same platform, we aim to offer comprehensive monitoring that captures both baseline soundscape metrics and real-time identification of cetacean vocalizations and ship signatures.
+              We deliver an adaptable and power efficient acoustic-based vessel detection, classification, localization and, tracking solution for remote maritime settings.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-8 flex justify-center space-x-4"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mt-8 flex justify-center lg:justify-start space-x-4"
             >
               <div className="rounded-md shadow">
                 <Button
@@ -58,21 +67,41 @@ export default function Hero() {
                   <a href="#waitlist">Join the Waitlist</a>
                 </Button>
               </div>
-              <div>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="w-full sm:w-auto text-[#14b8a6] bg-white px-8 py-3 md:py-4 md:text-lg md:px-10"
-                >
-                  <a href="#about">Learn More</a>
-                </Button>
-              </div>
             </motion.div>
           </div>
+
+          {/* Right side - App screenshot */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:flex-[2] w-full max-w-5xl"
+          >
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#5eead4]/20 to-[#38bdf8]/20 rounded-xl blur-2xl" />
+              <img
+                src="/thalios-dashboard.png"
+                alt="Thalios Dashboard"
+                className="relative rounded-xl shadow-2xl border border-white/10 w-full"
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
 
+      {/* Scroll down arrow */}
+      <motion.a
+        href="#about"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: [0, 10, 0] }}
+        transition={{
+          opacity: { delay: 0.5, duration: 0.5 },
+          y: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+        }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/70 hover:text-white transition-colors hidden md:block"
+      >
+        <ChevronDown className="h-10 w-10" />
+      </motion.a>
     </section>
   );
 }

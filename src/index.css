@@ -12,6 +12,10 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply font-mono antialiased bg-[#001834] text-foreground;
   }
