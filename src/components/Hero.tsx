@@ -20,9 +20,9 @@ export default function Hero() {
         />
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        <div className="flex flex-col xl:flex-row items-center justify-between gap-8 xl:gap-12">
           {/* Left side - Logo and Text content */}
-          <div className="text-center lg:text-left max-w-xl w-full flex flex-col items-center lg:items-start">
+          <div className="text-center xl:text-left max-w-xl w-full flex flex-col items-center xl:items-start">
             {/* Logo - left aligned */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -30,7 +30,7 @@ export default function Hero() {
               transition={{ duration: 0.6 }}
               className="mb-2"
             >
-              <img src="/thalios logo_horizontal white.png" alt="Thalios Logo" className="h-20 sm:h-16 lg:h-20 w-auto lg:-ml-6" />
+              <img src="/thalios logo_horizontal white.png" alt="Thalios Logo" className="h-20 sm:h-16 xl:h-20 w-auto xl:-ml-6" />
             </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -48,7 +48,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-6 text-base text-gray-300 sm:text-lg lg:text-lg xl:text-xl max-w-lg"
+              className="mt-6 text-base text-gray-300 sm:text-lg xl:text-xl max-w-lg"
             >
               We deliver an adaptable and power efficient acoustic-based vessel detection, classification, localization and, tracking solution for remote maritime settings.
             </motion.p>
@@ -56,7 +56,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="mt-8 flex justify-center lg:justify-start space-x-4"
+              className="mt-8 flex justify-center xl:justify-start space-x-4"
             >
               <div className="rounded-md shadow">
                 <Button
